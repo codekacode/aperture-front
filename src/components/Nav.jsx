@@ -8,9 +8,9 @@ const Navigation = styled.nav`
     align-items: center;
 `
 
-const Logo = styled.img`
-    max-width: 200px;
-`
+// const Logo = styled.img`
+//     max-width: 200px;
+// `
 
 const Menu = styled.ul`
     display: flex;
@@ -22,7 +22,7 @@ function Nav () {
     return (
         <Navigation className="nav">
             <div>
-                <Logo src={require('./images/aperture-logo.png')} />
+                Hola
             </div>
             <Menu>
                 <li><a>New</a></li>

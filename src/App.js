@@ -1,17 +1,15 @@
-import './App.css';
-import Products from './Products';
-import Nav from './Nav';
-import Suscribe from './Suscribe';
-import GitHub from './Data';
+import {Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import Nav from './components/Nav';
+import { Home } from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Nav/>
-      <Products/>
-      <Suscribe/>
-      <GitHub />
-    </div>
+      <Routes>
+        <Route path='/' element={<Home />}/>
+      </Routes>
+    </Router>
   );
 }
 
