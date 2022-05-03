@@ -11,12 +11,10 @@ function GitHub() {
         getData();
     },[])
 
-    const getData = () => {
-        axios.get(`https://api.github.com/search/users?q=${searchTerm}`)
-            .then(res => {
-                setData(res.data.items);
-                setIsLoading(false)
-            });
+    const getData = async() => {
+        const res = await axios.get(`https://api.github.com/search/users?q=${searchTerm}`)
+            setData(res.data.items);
+            setIsLoading(false)
     }
 
     const handleSubmit = event => {
