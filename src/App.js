@@ -1,15 +1,34 @@
+import React, { useState, useEffect } from 'react';
 import {Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Nav';
 import { Product } from './components/Products/Product/Product';
+import { Products } from './components/Products/Products';
 import { Home } from './pages/Home';
+import commerceData from './Data/commerceData.js'
 
 function App() {
+
+  const [products, setProducts] = useState([])
+
+  const addProducts = () => {
+    const commerceDataFetch = commerceData
+    setProducts(commerceDataFetch)
+  }
+
+  console.log(products)
+  useEffect(() => {
+    addProducts();
+  }, [])
+
+  console.log(products)
+  
   return (
     <Router>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/product' element={<Product />}/>
+        <Route path='/products' element={<Products products={products} />}/>
       </Routes>
     </Router>
   );

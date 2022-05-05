@@ -2,7 +2,7 @@ import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } fro
 
 import useStyles from './styles';
 
-export const Product = () => {
+export const Product = ({product}) => {
     const classes = useStyles();
     return (
         <Card className={classes.root}>
@@ -10,10 +10,10 @@ export const Product = () => {
             <CardContent>
                 <div className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                        Reloj Apple Watch
+                        {product.name}
                     </Typography>
                      <Typography gutterBottom variant="h5" component="h2">
-                        20.00
+                        {product.author}
                     </Typography>
                 </div>
             </CardContent>
