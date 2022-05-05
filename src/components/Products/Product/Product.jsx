@@ -2,7 +2,8 @@ import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } fro
 
 import useStyles from './styles';
 
-export const Product = ({product}) => {
+const Product = ({product}) => {
+    console.log(product);
     const classes = useStyles();
     return (
         <Card className={classes.root}>
@@ -10,10 +11,10 @@ export const Product = ({product}) => {
             <CardContent>
                 <div className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                        {product.name}
+                        hola
                     </Typography>
                      <Typography gutterBottom variant="h5" component="h2">
-                        {product.author}
+                        Hola
                     </Typography>
                 </div>
             </CardContent>
@@ -25,3 +26,5 @@ export const Product = ({product}) => {
         </Card>
     )
 }
+
+export default Product;

@@ -1,6 +1,6 @@
 import Grid from '@material-ui/core/Grid';
-import { Product } from './Product/Product';
 import useStyles from './styles';
+import Product from './Product/Product';
 
 
 export const Products = ({products}) => {

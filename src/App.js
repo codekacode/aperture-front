@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import {Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Nav';
-import { Product } from './components/Products/Product/Product';
 import { Products } from './components/Products/Products';
 import { Home } from './pages/Home';
 import commerceData from './Data/commerceData.js'
+import Cart from './components/Cart/Cart';
+import Product from './components/Products/Product/Product';
 
 function App() {
 
@@ -27,8 +28,9 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/product' element={<Product />}/>
         <Route path='/products' element={<Products products={products} />}/>
+        <Route path='/product' element={<Product />}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
     </Router>
   );

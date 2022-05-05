@@ -17,14 +17,14 @@ const Cart = ({ cart }) => {
     const renderCart = () => (
         <>
             <Grid>
-                <Grid item xs={12} sm={4} key={lineItem.id}>
-                    <CartItem item={lineItem} onUpdateCartQty={onUpdateCartQty} onRemoveFromCart={onRemoveFromCart} />
+                <Grid item xs={12} sm={4} key="999">
+                    <CartItem>Item Cart</CartItem>
                 </Grid>
             </Grid>
             <div className={classes.cardDetails}>
-                <Typography variant="h4">Subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
+                <Typography variant="h4">Subtotal: 90000.00</Typography>
                 <div>
-                    <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Empty cart</Button>
+                    <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" >Empty cart</Button>
                     <Button className={classes.checkoutButton} component={Link} to="/checkout" size="large" type="button" variant="contained" color="primary">Checkout</Button>
                 </div>
             </div>
@@ -35,7 +35,7 @@ const Cart = ({ cart }) => {
         <Container>
             <div className={classes.toolbar}>
                 <Typography className={classes.title} variant="h3" gutterBottom>Tu carrito de compras</Typography>
-                { !cart.line_items.length ? renderEmptyCart() : renderCart() }
+                { false ? renderEmptyCart() : renderCart() }
             </div>
         </Container>
     )
