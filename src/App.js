@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Nav';
+import {Footer} from './components/Footer';
 import { Products } from './components/Products/Products';
 import { Home } from './pages/Home';
 import commerceData from './Data/commerceData.js'
@@ -34,6 +35,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/signin' element={<SignIn/>}/>
       </Routes>
+      <Footer />
     </Router>
   );
 }
