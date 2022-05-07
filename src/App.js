@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import commerceData from './Data/commerceData.js'
 import Cart from './components/Cart/Cart';
 import Product from './components/Products/Product/Product';
+import { SignIn } from './components/SignIn';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/products' element={<Products products={products} />}/>
         <Route path='/product' element={<Product />}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/signin' element={<SignIn/>}/>
       </Routes>
     </Router>
   );

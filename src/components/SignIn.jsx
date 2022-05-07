@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
+// import Button from 'react-bootstrap/Button';
+import { Button } from 'react-bootstrap';
 
 export const SignIn = () => {
     // const navigate = useNavigate();
     return (
+        <>
         <form>
             <div>Ingresa a tu cuenta</div>
             <div>
@@ -22,6 +25,9 @@ export const SignIn = () => {
                 <p>¿No tienes una cuenta?</p>
                 <p>Registrate<Link to="/"></Link></p>
             </div>
+            <Button variant="primary">boostrap</Button>
         </form>
+        <Button variant="secondary">Hola</Button>
+        </>
     )
 }
