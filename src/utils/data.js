@@ -1,8 +1,17 @@
 export const bannersData = [
     {
         id:1,
-        image: 'https://res.cloudinary.com/codeable/image/upload/v1652068290/aperture/banner-1_zxhomb.png',
+        image: 'https://res.cloudinary.com/codeable/image/upload/v1652073351/aperture/banner-1_dpuhck.png'
+    },
+    {
+        id:2,
+        image: 'https://res.cloudinary.com/codeable/image/upload/v1652073220/aperture/banner-2_bxxhwr.png'
+    },
+    {
+        id:3,
+        image: 'https://res.cloudinary.com/codeable/image/upload/v1652227241/aperture/banner-3_izfugx.png'
     }
+
 
 ];
 

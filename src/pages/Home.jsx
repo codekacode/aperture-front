@@ -1,26 +1,22 @@
-import { useEffect, useState } from "react"
-import Banner from "../components/Banner"
-import { Carrusel } from "../components/Carrusel"
-import { bannersData } from "../utils/data"
+import { useState } from "react";
+import Banner from "../components/Banner";
+import { Carrusel } from "../components/Carrusel";
+import { bannersData } from "../utils/data";
 
 
 export const Home = () => {
-    const [bannerData, setBannersData] = useState([]);
-    
-    const addBanners = () => {
-    const bannersDataFetch = bannersData
-    setBannersData(bannersDataFetch)
-  }
-
-  useEffect(() => {
-    addBanners();
-  }, [])
+    const [bannersDataState] = useState(bannersData);
 
     return (
         <div>
             <h1>Home Page</h1>
             <Carrusel/>
-            <Banner bannerData={bannerData[0]}/>
+            {bannersDataState.map(bannerData => {
+                return(
+                    <Banner bannerData={bannerData } />
+                )
+            })}
+            
         </div>
     )
 }
